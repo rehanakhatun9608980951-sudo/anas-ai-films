@@ -1,0 +1,428 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#090909">
+<title>Anas Farooqui | AI Films</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: #090909;
+  color: #f3f0e9;
+  font-family: Arial, sans-serif;
+  line-height: 1.7;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+}
+
+header {
+  border-bottom: 1px solid #292929;
+  background: #090909;
+}
+
+nav {
+  min-height: 75px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+}
+
+.logo {
+  font-size: 14px;
+  letter-spacing: 2px;
+  font-weight: bold;
+}
+
+.nav-links {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+  font-size: 12px;
+  color: #aaa;
+}
+
+.hero {
+  padding: 110px 0;
+  min-height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.label {
+  color: #c6a878;
+  font-size: 11px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: clamp(44px, 9vw, 88px);
+  font-weight: 400;
+  line-height: 1.05;
+  letter-spacing: -2px;
+}
+
+.hero p {
+  max-width: 580px;
+  margin-top: 24px;
+  color: #aaa;
+}
+
+.button {
+  display: inline-block;
+  padding: 12px 20px;
+  border: 1px solid #c6a878;
+  margin-top: 25px;
+  font-size: 11px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.button:hover {
+  background: #c6a878;
+  color: #090909;
+}
+
+section {
+  padding: 75px 0;
+  border-top: 1px solid #292929;
+}
+
+h2 {
+  font-size: clamp(32px, 5vw, 48px);
+  font-weight: 400;
+  line-height: 1.2;
+  margin-bottom: 30px;
+}
+
+.film-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 35px 22px;
+}
+
+.film-image {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  background: #181818;
+  overflow: hidden;
+  border: 1px solid #292929;
+}
+
+.film-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.film-info {
+  padding-top: 14px;
+}
+
+.film-info h3 {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.film-info p {
+  color: #aaa;
+  font-size: 13px;
+}
+
+.watch {
+  display: inline-block;
+  color: #c6a878;
+  font-size: 11px;
+  letter-spacing: 1px;
+  margin-top: 10px;
+}
+
+.more-work {
+  margin-top: 55px;
+  padding: 28px;
+  background: #121212;
+  border: 1px solid #292929;
+}
+
+.more-work p,
+.about p,
+.contact p {
+  color: #aaa;
+}
+
+.about-grid,
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 35px;
+}
+
+.skills {
+  margin-top: 20px;
+  color: #c6a878;
+  font-size: 12px;
+  line-height: 2.5;
+}
+
+.contact-list {
+  list-style: none;
+}
+
+.contact-list li {
+  border-bottom: 1px solid #292929;
+  padding: 16px 0;
+  overflow-wrap: anywhere;
+}
+
+.contact-list small {
+  display: block;
+  color: #aaa;
+  letter-spacing: 2px;
+  font-size: 10px;
+  text-transform: uppercase;
+}
+
+footer {
+  padding: 25px 0;
+  border-top: 1px solid #292929;
+  color: #999;
+  font-size: 12px;
+}
+
+.footer-row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+@media (max-width: 650px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 18px 0;
+  }
+
+  .hero { padding: 75px 0; }
+
+  .film-grid,
+  .about-grid,
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  section { padding: 60px 0; }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <nav class="container">
+    <a class="logo" href="#home">ANAS FAROOQUI</a>
+    <div class="nav-links">
+      <a href="#films">Films</a>
+      <a href="#more-work">More Work</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+
+<section class="hero container" id="home">
+  <div class="label">AI Video Producer · Cinematic Editor</div>
+  <h1>Stories Beyond Reality.</h1>
+  <p>
+    AI Video Producer and Cinematic Editor specialising in AI-assisted
+    filmmaking, cinematic storytelling, luxury product films, and commercial visuals.
+  </p>
+  <a class="button" href="#films">Explore Selected Films ↗</a>
+</section>
+
+<section id="films">
+  <div class="container">
+    <div class="label">Selected Work · 01—05</div>
+    <h2>Featured Films</h2>
+
+    <div class="film-grid">
+
+      <article>
+        <a class="film-image"
+           href="https://drive.google.com/file/d/10UL3PNdycHX0yb7ubI46ZQ71_WdI1GYy/view"
+           target="_blank" rel="noopener">
+          <img src="Image/Film Card 3(1).png"
+               alt="EIDOLON luxury perfume film">
+        </a>
+        <div class="film-info">
+          <h3>EIDOLON</h3>
+          <p>Luxury Perfume Film</p>
+          <a class="watch" href="https://drive.google.com/file/d/10UL3PNdycHX0yb7ubI46ZQ71_WdI1GYy/view" target="_blank" rel="noopener">WATCH FILM ↗</a>
+        </div>
+      </article>
+
+      <article>
+        <a class="film-image"
+           href="https://drive.google.com/file/d/1e8jnOzZ1o1_cRzVPOIdZ6Nxsx_u7Txsu/view"
+           target="_blank" rel="noopener">
+          <img src="Image/Film Card 2 (1).png"
+               alt="ORKA — Silence is a Superpower">
+        </a>
+        <div class="film-info">
+          <h3>ORKA</h3>
+          <p>Silence is a Superpower</p>
+          <a class="watch" href="https://drive.google.com/file/d/1e8jnOzZ1o1_cRzVPOIdZ6Nxsx_u7Txsu/view" target="_blank" rel="noopener">WATCH FILM ↗</a>
+        </div>
+      </article>
+
+      <article>
+        <a class="film-image"
+           href="https://drive.google.com/file/d/10Kcv8AP-yJ4era1LeXladbPnJdT_bt-W/view"
+           target="_blank" rel="noopener">
+          <img src="Image/Film Card (1).png"
+               alt="Nocturne — The Monster in a Suit">
+        </a>
+        <div class="film-info">
+          <h3>Nocturne</h3>
+          <p>The Monster in a Suit</p>
+          <a class="watch" href="https://drive.google.com/file/d/10Kcv8AP-yJ4era1LeXladbPnJdT_bt-W/view" target="_blank" rel="noopener">WATCH FILM ↗</a>
+        </div>
+      </article>
+
+      <article>
+        <a class="film-image"
+           href="https://drive.google.com/file/d/1BehMI3fhKdX8ulgRVoACLCYbzvYZpUDw/view"
+           target="_blank" rel="noopener">
+          <img src="Image/Film Card 2(3)(1).png"
+               alt="The Night Shift">
+        </a>
+        <div class="film-info">
+          <h3>The Night Shift</h3>
+          <p>Cinematic Film</p>
+          <a class="watch" href="https://drive.google.com/file/d/1BehMI3fhKdX8ulgRVoACLCYbzvYZpUDw/view" target="_blank" rel="noopener">WATCH FILM ↗</a>
+        </div>
+      </article>
+
+      <article>
+        <a class="film-image"
+           href="https://drive.google.com/file/d/1BuvukbAg1jIDh70dhH2epwRnHWbdBBYm/view"
+           target="_blank" rel="noopener">
+          <img src="Image/Film Card 1 (1).png"
+               alt="Ruh-e-Deccan heritage luxury storytelling">
+        </a>
+        <div class="film-info">
+          <h3>Ruh-e-Deccan</h3>
+          <p>Heritage Luxury Storytelling</p>
+          <a class="watch" href="https://drive.google.com/file/d/1BuvukbAg1jIDh70dhH2epwRnHWbdBBYm/view" target="_blank" rel="noopener">WATCH FILM ↗</a>
+        </div>
+      </article>
+
+    </div>
+
+    <div class="more-work" id="more-work">
+      <div class="label">Beyond the Selection</div>
+      <h2>More Work</h2>
+      <p>
+        Discover additional creative projects, AI filmmaking experiments,
+        and cinematic visual stories. More projects can be added here when
+        their details and links are provided.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="container about-grid">
+    <div>
+      <div class="label">The Creator</div>
+      <h2>About Anas</h2>
+    </div>
+    <div>
+      <p>
+        Anas Farooqui is an AI Video Producer and Cinematic Editor
+        specialising in AI-assisted filmmaking, cinematic storytelling,
+        luxury product films, and commercial visuals.
+      </p>
+      <p style="margin-top:16px;">
+        His work combines AI-generated imagery, visual direction, editing,
+        and sound design to create distinctive visual narratives.
+      </p>
+      <div class="skills">
+        AI FILMMAKING · CINEMATIC EDITING · LUXURY PRODUCT FILMS ·
+        COMMERCIAL VISUALS · VISUAL STORYTELLING
+      </div>
+      <a class="button"
+         href="https://drive.google.com/file/d/1NLhieFz7_z70V6mASefNtox94h0Qsi7K/view?usp=drivesdk"
+         target="_blank" rel="noopener">View Resume ↗</a>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="container contact-grid">
+    <div>
+      <div class="label">Start a Project</div>
+      <h2>Let's Create<br>Something Distinctive.</h2>
+      <p style="margin-top:20px;">
+        Have a film or creative project in mind?
+      </p>
+    </div>
+
+    <ul class="contact-list">
+      <li>
+        <small>Email</small>
+        <a href="mailto:mafar.1922@gmail.com">mafar.1922@gmail.com</a>
+      </li>
+      <li>
+        <small>Phone</small>
+        <a href="tel:+917982304029">+91 7982304029</a>
+      </li>
+      <li>
+        <small>LinkedIn</small>
+        <a href="https://www.linkedin.com/in/anas-farooqui-0a6b52211?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener">Connect with Anas ↗</a>
+      </li>
+      <li>
+        <small>Resume</small>
+        <a href="https://drive.google.com/file/d/1NLhieFz7_z70V6mASefNtox94h0Qsi7K/view?usp=drivesdk" target="_blank" rel="noopener">View Resume ↗</a>
+      </li>
+    </ul>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="container footer-row">
+    <span>© 2026 Anas Farooqui</span>
+    <span>AI FILMMAKING · VISUAL STORYTELLING</span>
+  </div>
+</footer>
+
+</body>
+</html>
